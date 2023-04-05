@@ -1,0 +1,21 @@
+<%- include('../components/header.ejs') -%> <%-
+include('../components/nav.ejs')-%>
+<main>
+  <div class="people-card-alignement">
+    <% for (var i = 0; i < people.length; i++) { %>
+    <div class="people-container">
+      <img class="people-img" src=" <%= image[i] %>" alt="Image people" />
+
+      <div class="people-info">
+        <p class="people-text">Name : <%= people[i].name %></p>
+        <p class="people-text">Height : <%= people[i].height %></p>
+        <p class="people-text">Mass : <%= people[i].mass %></p>
+        <p class="people-text">Skin : <%= people[i].skin_color %></p>
+        <p class="people-text">Eyes : <%= people[i].eye_color %></p>
+        <p class="people-text">Birth Year : <%= people[i].birth_year %></p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</main>
+<%- include( '../components/footer.ejs' ) -%>

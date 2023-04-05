@@ -1,0 +1,32 @@
+<%- include('../components/header.ejs') -%> <%- include('../components/nav.ejs')
+-%>
+<main>
+  <div class="film-card-alignement">
+    <% for (var i = 0; i < film.length; i++) { %>
+    <div class="film-container">
+      <img
+        class="film-img"
+        src="/images/téléchargement.jpeg"
+        alt="Image Group"
+      />
+      <div class="film-info">
+        <p class="film-text">Name : <%= film[i].title %></p>
+        <p class="film-text">Episode : <%= film[i].episode_id %></p>
+        <p class="film-text">Director : <%= film[i].director %></p>
+        <p class="film-text">Release date : <%= film[i].release_date %></p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <h2 class="film-h2">Synopsis :</h2>
+  <div class="film-synops">
+    <% for (var i = 0; i < film.length; i++) { %>
+    <h4 class="film-title">
+      <%= film[i].title %> | Episode : <%= film[i].episode_id %> | <%=
+      film[i].release_date %>
+    </h4>
+    <p class="film-desc"><%= film[i].opening_crawl %></p>
+    <% } %>
+  </div>
+</main>
+<%- include( '../components/footer.ejs' ) -%>

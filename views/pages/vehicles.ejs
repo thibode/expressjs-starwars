@@ -1,0 +1,15 @@
+<%- include('../components/header.ejs') -%> <%- include('../components/nav.ejs')
+-%>
+<main>
+  <div class="vehicle-card-alignement">
+    <% for (var i = 0; i < vehicle.length; i++) { %>
+    <div class="vehicle-container">
+      <img class="vehicle-img" src="/images/vehicle.jpg" alt="Image Group" />
+      <div class="vehicle-info">
+        <p class="vehicle-text">Name : <%= vehicle[i].name %></p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</main>
+<%- include( '../components/footer.ejs' ) -%>

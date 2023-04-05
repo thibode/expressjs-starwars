@@ -1,0 +1,24 @@
+<%- include('../components/header.ejs') -%> <%- include('../components/nav.ejs')
+-%>
+<main>
+  <div class="planet-card-alignement">
+    <% for (var i = 0; i < planet.length; i++) { %>
+    <div class="planet-container">
+      <img class="planet-img" src="<%= image[i] %>" alt="Image Group" />
+      <div class="planet-info">
+        <p class="planet-text">Name : <%= planet[i].name %></p>
+        <p class="planet-text">
+          Rotation period : <%= planet[i].rotation_period %>
+        </p>
+        <p class="planet-text">
+          Orbital period : <%= planet[i].orbital_period %>
+        </p>
+        <p class="planet-text">Diameter : <%= planet[i].diameter %></p>
+        <p class="planet-text">Climate : <%= planet[i].climate %></p>
+        <p class="planet-text">Population : <%= planet[i].population %></p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</main>
+<%- include( '../components/footer.ejs' ) -%>

@@ -1,0 +1,30 @@
+<%- include('../components/header.ejs') -%> <%- include('../components/nav.ejs')
+-%>
+<main>
+  <div class="starship-card-alignement">
+    <% for (var i = 0; i < starship.length; i++) { %>
+    <div class="starship-container">
+      <img
+        class="starship-img"
+        src="/images/2210674-u2.jpeg"
+        alt="Image Group"
+      />
+      <div class="starship-info">
+        <p class="starship-text">Name : <%= starship[i].name %></p>
+        <p class="starship-text">Model : <%= starship[i].model %></p>
+        <p class="starship-text">
+          Cost in credits : <%= starship[i].cost_in_credits %>
+        </p>
+        <p class="starship-text">Length : <%= starship[i].length %></p>
+        <p class="starship-text">
+          Max speed : <%= starship[i].max_atmosphering_speed %>
+        </p>
+        <p class="starship-text">
+          Cargo capacity : <%= starship[i].cargo_capacity %>
+        </p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</main>
+<%- include( '../components/footer.ejs' ) -%>
