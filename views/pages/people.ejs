@@ -4,7 +4,7 @@ include('../components/nav.ejs')-%>
   <div class="people-card-alignement">
     <% for (var i = 0; i < people.length; i++) { %>
     <div class="people-container">
-      <img class="people-img" src=" <%= image[i] %>" alt="Image people" />
+      <img class="people-img" src="<%= image[i] %>" alt="Image people" />
 
       <div class="people-info">
         <p class="people-text">Name : <%= people[i].name %></p>
